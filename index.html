@@ -474,7 +474,7 @@ toggle.classed("hidden", !toggle.classed("hidden"));
           // .style("stroke-width",3);
           svg2.append('text')
           .text("Total student loan borrowed £"+d3.format(",.0f")(totalloan))
-          .attr("text-anchor", function(d){if(totalloan>totalpaidback){return "end"}else{return "middle"}})
+          .attr("text-anchor", function(d){if(totalpaidback-totalloan<10000){return "end"}else{return "middle"}})
           .style("font-size", "18px")
           .style("fill", "red")
           .attr('y',height/7)
