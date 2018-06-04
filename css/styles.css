@@ -2,12 +2,12 @@
 		max-width:700px;
 		margin:0px auto;
 	}
-	
+
 	#graphic {
-		max-width:650px;
+
 		margin:0px auto;
 	}
-	
+
 	.tick text {
       fill: #414042;
       font-family: 'Open Sans', Arial, sans-serif;
@@ -19,7 +19,7 @@
       fill:none;
       stroke-width: 1px !important;
     }
-  	
+
     .quest_line {
       stroke: #FF9933 !important;
       stroke-width: 3px !important;
@@ -28,12 +28,11 @@
     .category--hover {
       stroke: #5F7682;
       stroke-width: 3px !important;
-    } 
-  
-    .container { 
+    }
+
+    .container {
       font-family: 'Open Sans', Arial, sans-serif;
       max-width: 800px !important;
-      padding-top: 100px;
       padding-left: 0;
       padding-right: 0;
       text-align: left;
@@ -154,7 +153,7 @@
       line-height: 24px;
       -webkit-font-smoothing: antialiased;
 }
-    
+
     .btn-primary1:hover,.btn-primary1:focus {
       background-color:#0b5d30;
     }
