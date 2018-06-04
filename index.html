@@ -447,7 +447,7 @@ toggle.classed("hidden", !toggle.classed("hidden"));
           .attr("width", x2(totalpaidback))
           .attr("height", height/20)
           svg2.append('text')
-          .text("Total paid back £"+d3.format(",.0f")(+totalpaidback))
+          .text("Total paid back over 30 years £"+d3.format(",.0f")(+totalpaidback))
           .attr("text-anchor", "end")
           .style("font-size", "18px")
           .style("fill", colour_palette[2])
@@ -471,7 +471,7 @@ toggle.classed("hidden", !toggle.classed("hidden"));
           // .style("stroke","red")
           // .style("stroke-width",3);
           svg2.append('text')
-          .text("Total loan £"+d3.format(",.0f")(totalloan))
+          .text("Total student loan borrowed £"+d3.format(",.0f")(totalloan))
           .attr("text-anchor", function(d){if(totalloan>totalpaidback){return "end"}else{return "middle"}})
           .style("font-size", "18px")
           .style("fill", "red")
