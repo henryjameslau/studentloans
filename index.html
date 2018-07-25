@@ -266,7 +266,9 @@ toggle.classed("hidden", !toggle.classed("hidden"));
    //start the counter for years
    debt=startingdebt[duration-1]
    paidbackintotal=0
+
    threshold=25000
+
    for(i=0;i<30;i++){
 
      if(salary<=threshold){interestRate=(100+inflation[i])/100}
@@ -389,7 +391,9 @@ toggle.classed("hidden", !toggle.classed("hidden"));
 				 d3.select(".x").select("path").style("stroke", "#666")
 
          colour_palette=['#1b9e77','#d95f02','#7570b3']
-         legendlabels=["Estimate Salary","Debt remaining","Total repaid"]
+         legendlabels=["Estimated Salary","Debt remaining","Total repaid"]
+
+
 
          svg.append('g').selectAll('path')
             .data(d3.entries(lines))
