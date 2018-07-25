@@ -243,6 +243,7 @@ toggle.classed("hidden", !toggle.classed("hidden"));
      paidbacktotal=[]
      startingdebt=[]
      debt=0
+     awe=[2.73,2.43,2.52,2.76,2.98,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
 
 
 
@@ -265,11 +266,14 @@ toggle.classed("hidden", !toggle.classed("hidden"));
    //start the counter for years
    debt=startingdebt[duration-1]
    paidbackintotal=0
+
+   threshold=25000
+
    for(i=0;i<30;i++){
 
-     if(salary<=25000){interestRate=(100+inflation[i])/100}
-     else if(salary>=25000&&salary<45000){interestRate=(100+((salary-25000)/20000*3)+inflation[i])/100}
-     else if(salary>=45000){interestRate=(100+inflation[i]+3)/100}
+     if(salary<=threshold){interestRate=(100+inflation[i])/100}
+     else if(salary>=threshold&&salary<(threshold+20000)){interestRate=(100+((salary-threshold)/20000*3)+inflation[i])/100}
+     else if(salary>=(threshold+20000)){interestRate=(100+inflation[i]+3)/100}
      interestonDebt=(debt*interestRate)-debt
 
 
@@ -284,6 +288,8 @@ toggle.classed("hidden", !toggle.classed("hidden"));
      debts.push(debt)
      salary=salary*((100+wagegrowth[i])/100)
      if(i!=29){salaries.push(salary)}
+     threshold=threshold*(100+awe[i])/100
+     console.log(threshold)
    }//end for years counter
 
     //lets make a graph
@@ -386,6 +392,8 @@ toggle.classed("hidden", !toggle.classed("hidden"));
 
          colour_palette=['#1b9e77','#d95f02','#7570b3']
          legendlabels=["Estimated Salary","Debt remaining","Total repaid"]
+
+
 
          svg.append('g').selectAll('path')
             .data(d3.entries(lines))
